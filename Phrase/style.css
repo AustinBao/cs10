@@ -1,0 +1,11 @@
+body {
+  background-color: bisque;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 400px;
+  margin: 25px auto;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+}

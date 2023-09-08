@@ -1,0 +1,61 @@
+html {
+  background: url("imgs/pattern.png") no-repeat center fixed;
+  background-size: cover;
+}
+
+body {
+  background-color: rgba(222, 184, 135, 0.8);
+  padding: 30px 150px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 700px;
+  margin: 25px auto;
+}
+
+h1,
+h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+}
+
+a {
+  color: green;
+}
+
+a:hover {
+  font-weight: bold;
+  color: maroon;
+}
+
+.center {
+  text-align: center;
+}
+
+.padlink {
+  padding: 20px;
+}
+
+.main_title {
+  color: green;
+}
+
+.main_title {
+  text-decoration: underline;
+  color: green;
+}
+
+.lianpi {
+  color: navy;
+}
+.guitar {
+  color: darkorange;
+}
+.yoasobi {
+  color: grey;
+}
+.stephencurry {
+  color: blue;
+}
+.latereg {
+  color: maroon;
+}
