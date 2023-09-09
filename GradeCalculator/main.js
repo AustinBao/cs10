@@ -1,16 +1,26 @@
-// The Js behind Austin's Addition Calculator
+// CS10 GRADE CALC BY AUSTIN
 
 // Button event listener
-document.getElementById("calculate").addEventListener("click", calculateSum);
+document
+  .getElementById("calculate")
+  .addEventListener("click", calculateBrightness);
 
-function calculateSum() {
+function calculateBrightness() {
   // Grabbing input
-  let num1 = +document.getElementById("num1").value;
-  let num2 = +document.getElementById("num2").value;
+  let css1 = +document.getElementById("css1").value;
+  // css1 = client side scripting 1
+  let css2 = +document.getElementById("css2").value;
+  // css2 = client side scripting 2
+  let sp1 = +document.getElementById("sp1").value;
+  // sp1 = structured programming 1
+  let sp2 = +document.getElementById("sp2").value;
+  // sp2 = structured programming 2
+  let pA = +document.getElementById("pA").value;
+  // PA = project A
 
-  // Processing (adding both numbers)
-  let sum = num1 + num2;
+  // Processing (getting sum then divide by 5 to find average)
+  let average = (css1 + css2 + sp1 + sp2 + pA) / 5;
 
-  // Outputting sum
-  document.getElementById("sum").innerHTML = sum;
+  // Output
+  document.getElementById("output").innerHTML = Math.round(average);
 }

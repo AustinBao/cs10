@@ -21,4 +21,4 @@ function calculateBrightness() {
 
   // Output
   document.getElementById("output").innerHTML = Math.round(brightness);
-}
+} 
