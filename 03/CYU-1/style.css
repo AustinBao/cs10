@@ -5,10 +5,10 @@ body {
 }
 
 input {
-  width: 50px;
+  width: 100px;
 }
 
-.analyzebtn {
+.calcbtn {
   border-radius: 12px;
   padding: 14px 40px;
   font-size: 15px;
