@@ -1,11 +1,9 @@
 // CS10 GRADE CALC BY AUSTIN
 
 // Button event listener
-document
-  .getElementById("calculate")
-  .addEventListener("click", calculateBrightness);
+document.getElementById("calculate").addEventListener("click", calculateGrade);
 
-function calculateBrightness() {
+function calculateGrade() {
   // Grabbing input
   let css1 = +document.getElementById("css1").value;
   // css1 = client side scripting 1
