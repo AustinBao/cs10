@@ -1,4 +1,4 @@
-// CS10 GRADE CALC BY AUSTIN
+// CS10 PASSWORD STRENGTH BY AUSTIN
 
 // Button event listener
 document.getElementById("pwbtn").addEventListener("click", getPWStrength);

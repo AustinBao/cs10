@@ -1,4 +1,4 @@
-// CS10 GRADE CALC BY AUSTIN
+// CS10 ORDINAL ADJECTIVES BY AUSTIN
 
 // Button event listener
 document.getElementById("checkord").addEventListener("click", getOrdinal);

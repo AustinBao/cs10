@@ -1,4 +1,4 @@
-//Password Checker BY AUSTIN
+//CS10 PASSWORD CHECKER BY AUSTIN
 
 // Button event listener
 document.getElementById("checkpw").addEventListener("click", passwordChecker);

@@ -1,4 +1,4 @@
-// CS10 GRADE CALC BY AUSTIN
+// CS10 NUMBER ANALYZER BY AUSTIN
 
 // Button event listener
 document.getElementById("analyzebtn").addEventListener("click", getNumberInfo);
