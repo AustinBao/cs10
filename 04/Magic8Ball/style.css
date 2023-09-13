@@ -1,0 +1,14 @@
+body {
+  width: 600px;
+  margin: 25px auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
+  width: 400px;
+}
+
+.submitbtn {
+  border-radius: 12px;
+  font-size: 15px;
+}
