@@ -1,7 +1,17 @@
 body {
   width: 600px;
+  background-color: white;
+  opacity: 0.8;
+  padding: 25px;
   margin: 25px auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+  background-image: url("imgs/galaxy.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 input {

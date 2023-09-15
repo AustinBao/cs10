@@ -1,5 +1,9 @@
 body {
-  width: 600px;
+  width: 800px;
   margin: 25px auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
+  width: 300px;
 }
