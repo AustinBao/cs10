@@ -3,7 +3,7 @@
 -----------------------------------
 WEB TECHNOLOGIES
 
-HTML
+HTML 
 HTML (HypterText Markup Language) is the fundamental building block of the
 Web and defines the content and structure of a web page. Below are some
 common page elements that HTML is used for:
@@ -16,8 +16,7 @@ common page elements that HTML is used for:
 Learn more about HTML with the w3Schools HTML Tutorial.
 
 CSS
-CSS (Cascading Style Sheets) is used to describe a web page's appearance
-and presentation. Below are some common uses of CSS:
+CSS (Cascading Style Sheets) is used to describe a web page's appearance and presentation. Below are some common uses of CSS:
     Fonts
     Colors
     Layout
@@ -38,12 +37,12 @@ A great JavaScript reference is The Modern JavaScript Tutorial.
 -----------------------------------
 - Style Notes
 -----------------------------------
-Centered Fixed Width Content (width 600px, top-margin: 25px, padding: 25px (top) 150px (left&right) 50px (bottom))
-Base Font: Verdana
-h1 & h2: Gill Sans font, letter spacing 25px
-h2: top margin 50px
-blue color: #1774bb
-orange color: #f15c2a
-yellow color: #fcb041
-hyperlink: navy color, make bold on hover
+Centered Fixed Width Content (width 600px, top-margin: 25px, padding: 25px (top) 150px (left&right) 50px (bottom)) (done)
+Base Font: Verdana (done)
+h1 & h2: Gill Sans font, letter spacing 25px (done)
+h2: top margin 50px (done)
+blue color: #1774bb (done)
+orange color: #f15c2a (done)
+yellow color: #fcb041 (done)
+hyperlink: navy color, make bold on hover (done)
  
