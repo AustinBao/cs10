@@ -1,4 +1,4 @@
-// SUNRISE CANVAS BY AUSTIN
+// COLLISION GAME BY AUSTIN
 
 // GET CANVAS
 let cnv = document.getElementById("mycanvas");
@@ -6,6 +6,9 @@ let ctx = cnv.getContext("2d");
 
 let mouseIsPressed = false;
 let mouseX, mouseY, pmouseX, pmouseY;
+// const drawnWalls = [];
+
+// ~~~~~ DRAWING MAZE ~~~~~ //
 let penColor;
 let size = 5;
 
@@ -18,12 +21,17 @@ function animate() {
     ctx.beginPath();
     ctx.moveTo(pmouseX, pmouseY);
     ctx.lineTo(mouseX, mouseY);
+
+    // SAVES DRAWN LINES TO ARRAY
+    // drawnWalls.push([mouseX, mouseY]);
+    // console.log(drawnWalls);
+
     ctx.stroke();
   }
 
   requestAnimationFrame(animate);
 }
-// Event Listeners & Handlers
+// Event Listeners & Handlers for mouse + keyboard actions
 document.addEventListener("mousedown", mousedownHandler);
 document.addEventListener("mouseup", mouseupHandler);
 document.addEventListener("mousemove", mousemoveHandler);
@@ -41,19 +49,12 @@ function mouseupHandler() {
 }
 
 function mousemoveHandler(event) {
-  // COMMENTED OUT LINES ARE SO I CAN UNDERSTAND HOW THE MOUSE POSITION IS CALCULATED
-
   let cnvRect = cnv.getBoundingClientRect();
-  // console.log(cnvRect.x, cnvRect.y, cnvRect.left, cnvRect.top);
-
   pmouseX = mouseX;
   pmouseY = mouseY;
 
   mouseX = event.x - cnvRect.x;
   mouseY = event.y - cnvRect.y;
-
-  // console.log(event.x, event.y);
-  // console.log(mouseX, mouseY);
 }
 
 function keydownHandler(event) {

@@ -17,7 +17,7 @@ drawGround("#008000");
 let degree = 2;
 let radius = 200;
 
-setInterval(rotatingSun, 1000);
+setInterval(rotatingSun, 200);
 function rotatingSun() {
   // CALCULATE THE X AND Y CORD OF THE SUN USING TRIGONOMETRY
   let sunX = 200 + radius * Math.cos(degree);
@@ -25,7 +25,7 @@ function rotatingSun() {
 
   // INCREASING DEGREE TO SIMULATE THE SUN ROTATING ON A AXIS
   if (degree < 360) {
-    degree += 0.2;
+    degree += 0.1;
   }
 
   // IF STATEMENTS TO CHECK LOCATION OF THE SUN IN THE SKY
