@@ -21,10 +21,10 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
-document.addEventListener("mousedown", mousedownHandler);
+document.addEventListener("mousedown", keyPressHandler);
 document.addEventListener("mouseup", mouseupHandler);
 
-function mousedownHandler() {
+function keyPressHandler() {
   mouseIsPressed = true;
 }
 
