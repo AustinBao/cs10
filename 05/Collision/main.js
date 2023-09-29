@@ -1,79 +1,66 @@
-// COLLISION GAME BY AUSTIN
+// COLLISION BY AUSTIN
+
+// https://www.jeffreythompson.org/collision-detection/index.php
+// https://happycoding.io/tutorials/processing/collision-detection
+// https://www.youtube.com/watch?v=_MyPLZSGS3s
 
 // GET CANVAS
 let cnv = document.getElementById("mycanvas");
+cnv.width = 400;
+cnv.height = 400;
 let ctx = cnv.getContext("2d");
 
-let mouseIsPressed = false;
-let mouseX, mouseY, pmouseX, pmouseY;
-// const drawnWalls = [];
+// DRAW MAZE
+ctx.fillStyle = "green";
+ctx.fillRect(5, 5, 50, 50);
+ctx.fillStyle = "black";
+ctx.fillRect(70, 0, 5, 340);
+ctx.fillRect(130, 60, 5, 340);
+ctx.fillRect(190, 0, 5, 340);
+ctx.fillRect(250, 60, 5, 340);
+ctx.fillRect(310, 0, 5, 340);
 
-// ~~~~~ DRAWING MAZE ~~~~~ //
-let penColor;
-let size = 5;
+// LISTEN TO KEY BEING PRESSED
+document.addEventListener("keydown", moveBox);
 
-requestAnimationFrame(animate);
-function animate() {
-  if (mouseIsPressed) {
-    ctx.strokeStyle = penColor;
-    ctx.lineWidth = size;
+// DECLARING VARIABLES
+let x = 330;
+let y = 5;
+let px, py;
 
-    ctx.beginPath();
-    ctx.moveTo(pmouseX, pmouseY);
-    ctx.lineTo(mouseX, mouseY);
-
-    // SAVES DRAWN LINES TO ARRAY
-    // drawnWalls.push([mouseX, mouseY]);
-    // console.log(drawnWalls);
-
-    ctx.stroke();
-  }
-
-  requestAnimationFrame(animate);
-}
-// Event Listeners & Handlers for mouse + keyboard actions
-document.addEventListener("mousedown", mousedownHandler);
-document.addEventListener("mouseup", mouseupHandler);
-document.addEventListener("mousemove", mousemoveHandler);
-document.addEventListener("keydown", keydownHandler);
-document
-  .getElementById("colorpicker")
-  .addEventListener("change", changePenColor);
-
-function mousedownHandler() {
-  mouseIsPressed = true;
-}
-
-function mouseupHandler() {
-  mouseIsPressed = false;
-}
-
-function mousemoveHandler(event) {
-  let cnvRect = cnv.getBoundingClientRect();
-  pmouseX = mouseX;
-  pmouseY = mouseY;
-
-  mouseX = event.x - cnvRect.x;
-  mouseY = event.y - cnvRect.y;
-}
-
-function keydownHandler(event) {
-  if (event.code == "ArrowUp") {
-    size++;
-  } else if (event.code == "ArrowDown") {
-    size--;
-  } else if (event.code == "Space") {
-    ctx.fillStyle = "white";
-    ctx.fillRect(0, 0, cnv.width, cnv.height);
-  } else if (event.code == "Digit1") {
-    penColor = "red";
-  } else if (event.code == "Digit2") {
-    penColor = "green";
-  } else if (event.code == "Digit3") {
-    penColor = "blue";
+function moveBox(event) {
+  let keyPressed = event.code;
+  px = x;
+  py = y;
+  if (keyPressed === "ArrowRight") {
+    x += 5;
+  } else if (keyPressed === "ArrowLeft") {
+    x -= 5;
+  } else if (keyPressed === "ArrowUp") {
+    y -= 5;
+  } else if (keyPressed === "ArrowDown") {
+    y += 5;
+  } else if (keyPressed === "Space") {
+    x = 330;
+    y = 5;
   }
 }
 
-function changePenColor() {
-  penColor = document.getElementById("colorpicker").value;
+function isCollide(a, b) {
+  return !(
+    a.y + a.height < b.y ||
+    a.y > b.y + b.height ||
+    a.x + a.width < b.x ||
+    a.x > b.x + b.width
+  );
+}
+
+requestAnimationFrame(draw);
+function draw() {
+  ctx.clearRect(px, py, 50, 50);
+
+  ctx.fillStyle = "blue";
+  ctx.fillRect(x, y, 50, 50);
+
+  requestAnimationFrame(draw);
 }
