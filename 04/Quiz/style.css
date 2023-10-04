@@ -7,3 +7,18 @@ body {
 input {
   width: 300px;
 }
+
+input:focus {
+  background-color: #cdcdcd;
+}
+
+.centerImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.centerText {
+  text-align: center;
+}

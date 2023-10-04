@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Technology Quiz</title>
+    <title>Programming Quiz</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="main.js"></script>
   </head>
 
   <body>
-    <h1>Technology Quiz</h1>
-    <img src="imgs/code.png" alt="laptop" />
-    <p>Quiz on topics that pertain to technology or programming.</p>
+    <h1 class="centerText">Programming Quiz</h1>
+    <img class="centerImg" src="imgs/code.png" alt="laptop" />
+    <p class="centerText">
+      Quiz on topics that pertain to technology or programming.
+    </p>
 
     <hr />
 
     <!-- Question 1 -->
-    <p>
+    <p style="padding-top: 20px">
       What company is known to be almost ten times harder to get a job at than
       it is to get into Harvard?
     </p>
     <input id="google" type="text" />
+    <div style="padding: 10px"><span id="googleAnswer"></span></div>
 
     <!-- Question 2 -->
     <p>
@@ -26,6 +29,7 @@
       numeric characters) stand for?
     </p>
     <input id="pin" type="text" />
+    <div style="padding: 10px"><span id="pinAnswer"></span></div>
 
     <!-- Question 3 -->
     <p>
@@ -33,10 +37,12 @@
       information that is sent from the browser to the web server?
     </p>
     <input id="cookie" type="text" />
+    <div style="padding: 10px"><span id="cookieAnswer"></span></div>
 
     <!-- Question 4 -->
     <p>What does the acronym Wi-Fi stand for?</p>
     <input id="wirelessfidelity" type="text" />
+    <div style="padding: 10px"><span id="wifiAnswer"></span></div>
 
     <!-- Question 5 -->
     <p>
@@ -44,22 +50,39 @@
       cell phone operating system?
     </p>
     <input id="android" type="text" />
+    <div style="padding: 10px"><span id="androidAnswer"></span></div>
 
     <!-- Question 6 -->
     <p>Name a company from the acronym FAANG?</p>
     <input id="faang" type="text" />
+    <div style="padding: 10px"><span id="faangAnswer"></span></div>
 
     <!-- Question 7 -->
+    <p>What was the first coding language devised by John Backus?</p>
+    <input id="firstcode" type="text" />
+    <div style="padding: 10px"><span id="firstcodeAnswer"></span></div>
+
+    <!-- Question 8 -->
+    <p>Java's original, intended name was?</p>
+    <input id="oak" type="text" />
+    <div style="padding: 10px"><span id="oakAnswer"></span></div>
+
+    <!-- Question 9 -->
     <p>
-      <strong>*BONUS FUN QUESTION</strong>
+      <strong>BONUS QUESTION</strong>
       When the kids online say "LoL," they're either laughing or referencing
       what online battle arena game?
     </p>
-    <input id="leagueoflegends" type="text" />
+    <div style="padding-bottom: 20px">
+      <input id="leagueoflegends" type="text" />
+      <div style="padding: 10px"><span id="leagueAnswer"></span></div>
+    </div>
 
     <hr />
-    <p style="padding: 5px">
+    <p style="padding-top: 20px; padding-bottom: 20px">
       <button id="submit">Submit</button>
+      <button id="showanswers">Show Answers</button>
+      <button id="hideanswers">Hide Answers</button>
     </p>
 
     <p>

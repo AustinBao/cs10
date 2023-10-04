@@ -9,6 +9,21 @@ let ctx = cnv.getContext("2d");
 // LISTEN TO KEY BEING PRESSED
 document.addEventListener("keydown", moveBox);
 
+// LISTENS TO BTN CLICK AND RESETS PAGE
+let resetbtn = document
+  .getElementById("reset")
+  .addEventListener("click", reset);
+
+function reset() {
+  boxX = 160;
+  boxY = 300;
+  rectangles = {
+    rect1: { x: 100, y: 120, width: 60, height: 60 },
+    rect2: { x: 200, y: 150, width: 60, height: 60 },
+    rect3: { x: 300, y: 200, width: 60, height: 60 },
+  };
+}
+
 function moveBox(event) {
   // ALLOWS THE MOVEMENT OF THE BLACK BOX
   let keyPressed = event.code;
