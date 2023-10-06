@@ -16,6 +16,7 @@ function quizResults() {
   let faang = document.getElementById("faang");
   let firstcode = document.getElementById("firstcode");
   let oak = document.getElementById("oak");
+  let montypython = document.getElementById("montypython");
   let leagueoflegends = document.getElementById("leagueoflegends");
 
   let score = 0;
@@ -82,6 +83,13 @@ function quizResults() {
     oak.style.outline = "2px solid red";
   }
 
+  if (montypython.value.toLowerCase() === "monty python") {
+    score++;
+    montypython.style.outline = "2px solid green";
+  } else {
+    montypython.style.outline = "2px solid red";
+  }
+
   if (leagueoflegends.value.toLowerCase() === "league of legends") {
     score++;
     leagueoflegends.style.outline = "2px solid green";
@@ -89,9 +97,9 @@ function quizResults() {
     leagueoflegends.style.outline = "2px solid red";
   }
 
-  let percent = Math.round((score / 9) * 100);
+  let percent = Math.round((score / 10) * 100);
 
-  document.getElementById("result").innerHTML = `${score}/9 or ${percent}%`;
+  document.getElementById("result").innerHTML = `${score}/10 or ${percent}%`;
 
   let encourage = document.getElementById("encourage");
   if (score >= 9) {
@@ -121,8 +129,9 @@ function displayAnswer() {
   document.getElementById("androidAnswer").innerHTML = "*Android";
   document.getElementById("faangAnswer").innerHTML =
     "*Facebook, Apple, Amazon, Netflix, or Google";
-  document.getElementById("firstcode").innerHTML = "*Fortran";
-  document.getElementById("oak").innerHTML = "*Oak";
+  document.getElementById("firstcodeAnswer").innerHTML = "*Fortran";
+  document.getElementById("oakAnswer").innerHTML = "*Oak";
+  document.getElementById("montypythonAnswer").innerHTML = "*Monty Python";
 
   document.getElementById("leagueAnswer").innerHTML = "*League of Legends";
 }
@@ -136,5 +145,6 @@ function removeAnswer() {
   document.getElementById("faangAnswer").innerHTML = "";
   document.getElementById("firstcode").innerHTML = "";
   document.getElementById("oak").innerHTML = "";
+  document.getElementById("montypython").innerHTML = "";
   document.getElementById("leagueAnswer").innerHTML = "";
 }

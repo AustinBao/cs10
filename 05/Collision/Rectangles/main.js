@@ -17,12 +17,19 @@ let resetbtn = document
 function reset() {
   boxX = 160;
   boxY = 300;
+  // MAKES THE CLONE APPEAR OFF THE CANVAS WHICH "RESETS" IT
+  cloneX = -10000;
+  cloneY = -10000;
   rectangles = {
     rect1: { x: 100, y: 120, width: 60, height: 60 },
     rect2: { x: 200, y: 150, width: 60, height: 60 },
     rect3: { x: 300, y: 200, width: 60, height: 60 },
   };
+  draw();
 }
+
+// PLACE A CLONE FOR YOU TO TELEPORT BACK TO
+let cloneX, cloneY;
 
 function moveBox(event) {
   // ALLOWS THE MOVEMENT OF THE BLACK BOX
@@ -35,9 +42,14 @@ function moveBox(event) {
     boxY -= 5;
   } else if (keyPressed === "ArrowDown") {
     boxY += 5;
-  } else if (keyPressed === "Space") {
-    boxX = 160;
-    boxY = 250;
+    // SET CLONE
+  } else if (keyPressed === "KeyZ") {
+    cloneX = boxX;
+    cloneY = boxY;
+    // TELEPORT TO CLONE
+  } else if (keyPressed === "KeyX") {
+    boxX = cloneX;
+    boxY = cloneY;
   }
 }
 
@@ -109,11 +121,29 @@ function draw() {
   ctx.fillStyle = "black";
   ctx.fillRect(boxX, boxY, 50, 50);
 
+  // MARKS THE CLONE
+  ctx.strokeStyle = "red";
+  ctx.setLineDash([6]);
+  ctx.strokeRect(cloneX, cloneY, 50, 50);
+
   // CHANGES HTML ELEMENT DEPENDING IF BLACK BOX "COLLIDES" WITH GREEN BOXES
   if (isCollide(rectangles, boxX, boxY, 50)) {
     document.getElementById("collide").innerHTML = "TRUE";
+
+    // WRITE GAME OVER WHEN YOU COLLIDE
+    ctx.font = "50px Arial";
+    ctx.fillStyle = "red";
+    ctx.fillText("Game Over", 70, 100);
+
+    document.getElementById("reset").style.display = "block";
+    // IDK WHY THE RESET BUTTON WONT GO TO THE MIDDLE AND SHOWS UP ON THE SIDE
+    document.getElementById("reset").style.alignItems = "center";
+
+    return;
   } else {
     document.getElementById("collide").innerHTML = "FALSE";
+    // KEEPS THE RESET BUTTON HIDEN IF YOU HAVENT COLLIDED YET
+    document.getElementById("reset").style.display = "none";
   }
   requestAnimationFrame(draw);
 }
