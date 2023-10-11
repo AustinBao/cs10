@@ -22,8 +22,8 @@ function reset() {
   x = 330;
   y = 5;
   boxDim = 50;
-  document.getElementById("progress").innerHTML = "Begin!";
-  document.getElementById("progress").style.color = "black";
+  progress.innerHTML = "Begin!";
+  progress.style.color = "black";
   draw();
 }
 
@@ -33,16 +33,18 @@ function moveBox(event) {
   py = y;
   if (x < 0.5 * cnv.width) {
     progress.innerHTML = "Almost there...";
+    progress.style.color = "yellow";
   } else {
     progress.innerHTML = "Keep going...";
+    progress.style.color = "orange";
   }
-  if (keyPressed === "ArrowRight") {
+  if (keyPressed === "ArrowRight" && x + boxDim < cnv.width) {
     x += 5;
-  } else if (keyPressed === "ArrowLeft") {
+  } else if (keyPressed === "ArrowLeft" && x > 0) {
     x -= 5;
-  } else if (keyPressed === "ArrowUp") {
+  } else if (keyPressed === "ArrowUp" && y > 0) {
     y -= 5;
-  } else if (keyPressed === "ArrowDown") {
+  } else if (keyPressed === "ArrowDown" && y + boxDim < cnv.height) {
     y += 5;
   } else if (keyPressed === "Space") {
     x = 330;
@@ -111,14 +113,14 @@ function draw() {
   ctx.fillRect(x, y, boxDim, boxDim);
 
   if (x == 5 && y == 5) {
-    document.getElementById("progress").innerHTML = "Success!";
-    document.getElementById("progress").style.color = "green";
+    progress.innerHTML = "Success!";
+    progress.style.color = "green";
     return;
   }
 
   if (isCollide(walls, x, y, boxDim)) {
-    document.getElementById("progress").innerHTML = "Try Again";
-    document.getElementById("progress").style.color = "red";
+    progress.innerHTML = "Try Again";
+    progress.style.color = "red";
     return;
   }
   requestAnimationFrame(draw);
