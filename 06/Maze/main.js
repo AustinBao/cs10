@@ -17,17 +17,23 @@ let x = 330;
 let y = 5;
 let boxDim = 50;
 let px, py;
+let lost = false;
 
 function reset() {
   x = 330;
   y = 5;
   boxDim = 50;
+  lost = false;
   progress.innerHTML = "Begin!";
   progress.style.color = "black";
   draw();
 }
 
 function moveBox(event) {
+  // PREVENTS CHANGING COLOR OF TEXT AFTER LOSING
+  if (lost === true) {
+    return;
+  }
   let keyPressed = event.code;
   px = x;
   py = y;
@@ -119,6 +125,7 @@ function draw() {
   }
 
   if (isCollide(walls, x, y, boxDim)) {
+    lost = true;
     progress.innerHTML = "Try Again";
     progress.style.color = "red";
     return;

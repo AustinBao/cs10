@@ -143,8 +143,8 @@ function removeAnswer() {
   document.getElementById("wifiAnswer").innerHTML = "";
   document.getElementById("androidAnswer").innerHTML = "";
   document.getElementById("faangAnswer").innerHTML = "";
-  document.getElementById("firstcode").innerHTML = "";
-  document.getElementById("oak").innerHTML = "";
-  document.getElementById("montypython").innerHTML = "";
+  document.getElementById("firstcodeAnswer").innerHTML = "";
+  document.getElementById("oakAnswer").innerHTML = "";
+  document.getElementById("montypythonAnswer").innerHTML = "";
   document.getElementById("leagueAnswer").innerHTML = "";
 }
