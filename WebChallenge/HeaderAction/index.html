@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Header</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+
+  <body>
+    <div id="menu">
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+    </div>
+
+    <div id="head" class="header">
+      <p>Enter name: <input id="nameIn" type="text" /></p>
+      <p>Today's task: <input id="taskIn" type="text" /></p>
+      <p>
+        Change background:
+        <select id="backgroundImg">
+          <option value="mountain">Mountain</option>
+          <option value="beach">Beach</option>
+          <option value="forest">Forest</option>
+        </select>
+      </p>
+      <button id="submit">Done</button>
+    </div>
+    <div class="main">
+      <h1>Hi<span id="name"></span></h1>
+      <h1>Today's main task:</h1>
+      <span id="task"></span>
+    </div>
+  </body>
+</html>
