@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <h3 id="name">Formula:</h3>
+    <h1>Math Formulas:</h1>
 
     <select id="formula-select">
       <option value="nothing">Select formula ...</option>
@@ -15,7 +15,8 @@
       <option value="slope">Slope of a Line</option>
       <option value="heron">Heron's Formula</option>
       <option value="traparea">Area of Trapezoid</option>
-      <option value="midpoint">Midpoint</option>
+      <!-- MORE FORMULAS I CAN ADD LATER -->
+      <!-- <option value="midpoint">Midpoint</option>
       <option value="cylindervolume">Cylinder Volume</option>
       <option value="cylindersurfacearea">Cylinder Surface Area</option>
       <option value="compound">Compound Interest</option>
@@ -23,15 +24,12 @@
       <option value="celsius">Celsius to Fahrenheit</option>
       <option value="tip">Tip</option>
       <option value="wage">Wage</option>
-      <option value="pythag">Pythagorean Theorem</option>
+      <option value="pythag">Pythagorean Theorem</option> -->
     </select>
 
-    <p>X1 : <input type="number" name="x1" id="x1" /></p>
-    <input type="number" name="y1" id="y1" />
-    <input type="number" name="x2" id="x2" />
-    <input type="number" name="y2" id="y2" />
-    <input type="number" name="a" id="a" />
-    <input type="number" name="b" id="b" />
-    <input type="number" name="c" id="c" />
-  </body>
+    <div id="formula-info">
+      <img src="imgs/question-mark.png" alt="question mark" width="500" />
+    </div>
+    <button id="calculate">Calculate</button>
+    <p>Result: </p><span id="answer">-----</span>
 </html>

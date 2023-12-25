@@ -3,11 +3,8 @@
 // Button event listener
 document.getElementById("submit").addEventListener("click", quizResults);
 
-document.getElementById("showanswers").addEventListener("click", displayAnswer);
-
-document.getElementById("hideanswers").addEventListener("click", removeAnswer);
-
 function quizResults() {
+  // Set variables to elements so I save space and write less
   let google = document.getElementById("google");
   let pin = document.getElementById("pin");
   let cookie = document.getElementById("cookie");
@@ -19,11 +16,14 @@ function quizResults() {
   let montypython = document.getElementById("montypython");
   let leagueoflegends = document.getElementById("leagueoflegends");
 
+  // Keeps track of score. Starts at zero 
   let score = 0;
 
+  // if input is equal to expected value, add 1 to the score and make input border green
   if (google.value.toLowerCase() === "google") {
     score++;
     google.style.outline = "2px solid green";
+    // else, make the border red since user got it wrong
   } else {
     google.style.outline = "2px solid red";
   }
@@ -56,6 +56,7 @@ function quizResults() {
     android.style.outline = "2px solid red";
   }
 
+  //  Accepts multiple answers as valid
   if (
     faang.value.toLowerCase() === "facebook" ||
     faang.value.toLowerCase() === "apple" ||
@@ -97,13 +98,17 @@ function quizResults() {
     leagueoflegends.style.outline = "2px solid red";
   }
 
+  // calculate percentage by dividing score by total and multiplying by 100
   let percent = Math.round((score / 10) * 100);
 
+  // Displays result in rational and percent form
   document.getElementById("result").innerHTML = `${score}/10 or ${percent}%`;
 
+  // Words of encouragement are selected based off of users score on the quiz. Color changes in correlation to how well they did
   let encourage = document.getElementById("encourage");
   if (score >= 9) {
     encourage.innerHTML = "Aced!";
+    // green color means good score
     encourage.style.color = "green";
   } else if (score >= 7) {
     encourage.innerHTML = "Very well done!";
@@ -116,35 +121,7 @@ function quizResults() {
     encourage.style.color = "orange";
   } else {
     encourage.innerHTML = "You need to study more!";
+    // red means bad score
     encourage.style.color = "red";
   }
-}
-
-function displayAnswer() {
-  document.getElementById("googleAnswer").innerHTML = "*Google";
-  document.getElementById("pinAnswer").innerHTML =
-    "*Personal Identification Number";
-  document.getElementById("cookieAnswer").innerHTML = "*Cookie";
-  document.getElementById("wifiAnswer").innerHTML = "*Wireless fidelity";
-  document.getElementById("androidAnswer").innerHTML = "*Android";
-  document.getElementById("faangAnswer").innerHTML =
-    "*Facebook, Apple, Amazon, Netflix, or Google";
-  document.getElementById("firstcodeAnswer").innerHTML = "*Fortran";
-  document.getElementById("oakAnswer").innerHTML = "*Oak";
-  document.getElementById("montypythonAnswer").innerHTML = "*Monty Python";
-
-  document.getElementById("leagueAnswer").innerHTML = "*League of Legends";
-}
-
-function removeAnswer() {
-  document.getElementById("googleAnswer").innerHTML = "";
-  document.getElementById("pinAnswer").innerHTML = "";
-  document.getElementById("cookieAnswer").innerHTML = "";
-  document.getElementById("wifiAnswer").innerHTML = "";
-  document.getElementById("androidAnswer").innerHTML = "";
-  document.getElementById("faangAnswer").innerHTML = "";
-  document.getElementById("firstcodeAnswer").innerHTML = "";
-  document.getElementById("oakAnswer").innerHTML = "";
-  document.getElementById("montypythonAnswer").innerHTML = "";
-  document.getElementById("leagueAnswer").innerHTML = "";
 }

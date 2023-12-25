@@ -3,14 +3,15 @@
 // Button event listener
 document.getElementById("submitbtn").addEventListener("click", magic8Ball);
 
+// SET VARIABLE FOR HTML ELEMENT "RESULT" TO SAVE SPACE AND WRITE LESS
 let result = document.getElementById("result");
 
 function magic8Ball() {
   let randnum = Math.random();
-  // MADE IT CASE INSENSITIVE
+  // MADE USER INPUT CASE INSENSITIVE
   let question = document.getElementById("question").value.toLowerCase();
 
-  // SPECIFIC QUESTION. RETURN SO THE OTHER IF STATEMENTS DONT RUN
+  // SPECIFIC QUESTION WITH DETERMINED RESPONSES. RETURN SO THE OTHER IF STATEMENTS DONT RUN
   if (question === "is harry ainlay the best school?") {
     result.innerHTML = "Obviously Harry Ainlay School is the best!";
     result.style.color = "blue";
@@ -27,11 +28,12 @@ function magic8Ball() {
     return;
   }
 
-  // CHECKS IF THE INPUT IS EMPTY
+  // CHECKS IF THE INPUT IS EMPTY. IF SO TELL USER TO ASK A QUESTION
   if (question.length === 0) {
     result.innerHTML = "Please ask a question...";
     result.style.color = "black";
   } else {
+    // DISPLAYS A RANDOM SENTENCE IF ALL IT PASSES ABOVE IF STATEMENTS
     if (randnum < 0.2) {
       result.innerHTML = "Without a Doubt.";
       result.style.color = "green";
