@@ -1,0 +1,48 @@
+
+html{
+    background-color: orange;
+}
+
+
+body {
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    padding: 80px;
+    margin: 250px auto;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+
+button {
+    background-color: navy;
+    border-radius: 5px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    width: 600px;
+    margin-top:20px;
+    padding: 12px 16px;
+    font-size: 18px;
+  }
+  
+p{
+    font-size: 18px;
+}
+
+input {
+    width: 600px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.finalResult {
+    font-size: 30px;
+    text-align: center;
+}

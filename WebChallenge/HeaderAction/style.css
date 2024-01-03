@@ -3,14 +3,26 @@ html {
   background-size: cover;
 }
 
+i{
+  font-size: 20px;
+}
+
+h1{
+  font-size: 50px;
+}
+
+select {
+  font-size: 15px;
+}
+
 .main {
-  background-color: rgb(220, 220, 220, 0.97);
-  width: 700px;
-  padding: 50px;
-  margin: 25px auto;
+  background-color: rgb(220, 220, 220, 0.9);
+  width: 600px;
+  padding: 70px;
+  margin: 250px auto;
   border-radius: 10px;
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .header {
@@ -28,6 +40,10 @@ html {
   margin: 6px 0;
 }
 
-select {
-  font-size: 15px;
+.tasktitle{
+  padding-top: 25px;
+}
+
+.usertask {
+  font-size: 30px;
 }

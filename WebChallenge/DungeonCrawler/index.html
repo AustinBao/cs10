@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dungeon Crawler</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <h1>Dungeon Crawler</h1>
+    <div class="mainDisplay">
+      <img id="displayRooms" src="imgs/room1.png" alt="startingplace">
+    </div>
+    <div class="stats">
+      <h3 id="health">Health: 3/3</h3> 
+      <h3 id="dmg">DMG: 3</h3>
+      <h3 id="action"></h3>
+    </div>
+    <input onkeypress="handleInput(event)" id="commands" placeholder="Enter a Command" type="text">
+    <span id="result"></span>
+    <img src="imgs/compass.png" alt="compass" height="300px" class="center">
+  </body>
+</html>
