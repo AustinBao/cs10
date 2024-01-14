@@ -1,0 +1,66 @@
+/* FLEXBOX video - https://www.youtube.com/watch?v=phWxA89Dy94 */
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+h2 {
+    font-size: 30px;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.container-grid{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1em;
+
+}
+
+.project {
+    margin-bottom: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 0px 20px;
+}
+
+.project:hover {
+    background-color: gainsboro;
+}
+
+.intro {
+    flex-basis: 550px;
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 20px;
+    text-align: center;
+}
+
